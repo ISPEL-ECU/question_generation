@@ -183,6 +183,11 @@ power_set_distractor_bank <- function(qa_level = NULL, question_type = NULL, dis
         }
     }
     
+    if(qa_level == 3) {
+        
+        
+    }
+    
     return(distractor_list)
 }
 
@@ -241,5 +246,688 @@ cartseian_product_distractor_bank <- function(qa_level = NULL, question_type = N
     }
     
     
+    
+    
+    
     return(distractor_list)
+}
+
+
+get_union_set_distractor <- function(qa_level = NULL, question_type = NULL, distractor_type = NULL, source_set_1 = NULL, source_set_2 = NULL, source_set_3 = NULL, setSize = NULL, dType = NULL) {
+    
+    distractor_list = vector(mode = "list", length = 1)
+    
+    if(qa_level == 1) {
+        
+        
+        if (distractor_type == 1) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                                                     getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+       
+        if (distractor_type == 2) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+        }
+        
+        
+        if (distractor_type == 3) {
+            
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+        }
+    }
+    
+    
+    if(qa_level == 2) {
+        
+        #reverses the sets using the rev() function and then flips the 1st and 2nd set.
+        if (distractor_type == 1) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+           
+        }
+        
+        #flips the 1st and 2nd set. 
+        if (distractor_type == 2) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        #keeps the sets normal
+        if (distractor_type == 3) {
+            
+           
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+    }
+    
+    if(qa_level == 3) {
+        
+        #reverses the sets using the rev() function and then flips the 1st and 2nd set.
+        if (distractor_type == 1) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+        }
+        
+        #flips the 1st and 2nd set. 
+        if (distractor_type == 2) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        #keeps the sets normal
+        if (distractor_type == 3) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+    }
+    
+    return(distractor_list)
+
+}
+
+get_intersect_set_distractor <- function(qa_level = NULL, question_type = NULL, distractor_type = NULL, source_set_1 = NULL, source_set_2 = NULL, source_set_3 = NULL, setSize = NULL, dType = NULL) {
+    
+    distractor_list = vector(mode = "list", length = 1)
+    
+    if(qa_level == 1) {
+        
+        if (distractor_type == 1) {
+            
+            
+            
+           distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                                                        getValue(x = dType, min = 1, max = 30, cat = 6))
+               
+        }
+        
+        if (distractor_type == 2) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+           
+            
+            
+            
+        }
+        
+        if (distractor_type == 3) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+            
+            }
+    }    
+    
+    if(qa_level == 2) {
+        
+        if (distractor_type == 1) {
+            
+            
+           distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                           getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+        }
+        
+        if (distractor_type == 2) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+            
+            
+        }
+        
+        if (distractor_type == 3) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                           getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+            
+        }
+    }
+    
+    if(qa_level == 3) {
+        
+        if (distractor_type == 1) {
+            
+            
+           distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                           getValue(x = dType, min = 1, max = 30, cat = 6))
+                
+            
+        }
+        
+        if (distractor_type == 2) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+            
+            
+        }
+        
+        if (distractor_type == 3) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+            
+        }
+    }    
+    
+    return(distractor_list)
+    
+}
+
+
+get_asymm_diff_distractor <- function(qa_level = NULL, question_type = NULL, distractor_type = NULL, source_set_1 = NULL, source_set_2 = NULL, source_set_3 = NULL, setSize = NULL, dType = NULL) {
+    
+    distractor_list = vector(mode = "list", length = 1)
+    
+    if(qa_level == 1) {
+        
+        if (distractor_type == 1) {
+            #alter answer by removing an element
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 2) {
+            
+            #add an element to the correct answer
+            # the issue here is that the "incorrect" element needs to be believable and 
+            # also not possible to be in the source sets. 
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+        }
+        
+        if (distractor_type == 3) {
+            
+            #remove another element
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+            
+        }
+    }    
+    
+    if(qa_level == 2) {
+        
+        if (distractor_type == 1) {
+            #alter answer by removing an element
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 2) {
+            
+            #add an element to the correct answer
+            # the issue here is that the "incorrect" element needs to be believable and 
+            # also not possible to be in the source sets. 
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+        }
+        
+        if (distractor_type == 3) {
+            
+            #remove another element
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+            
+        }
+    }    
+    
+    if(qa_level == 3) {
+        
+        if (distractor_type == 1) {
+            #alter answer by removing an element
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 2) {
+            
+            #add an element to the correct answer
+            # the issue here is that the "incorrect" element needs to be believable and 
+            # also not possible to be in the source sets. 
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+        }
+        
+        if (distractor_type == 3) {
+            
+            #remove another element
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+            
+        }
+    }    
+    
+    
+    
+    
+    return(distractor_list)
+    
+}
+
+get_complement_set_distractor <- function(qa_level = NULL, question_type = NULL, distractor_type = NULL, source_set_1 = NULL, source_set_2 = NULL, source_set_3 = NULL, setSize = NULL, dType = NULL) {
+    
+    distractor_list = vector(mode = "list", length = 1)
+    
+    if(qa_level == 1) {
+        
+        if (distractor_type == 1) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 2) {
+            
+        
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 3) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+        }
+    }    
+    
+    if(qa_level == 2) {
+        
+        if (distractor_type == 1) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 2) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 3) {
+            
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+        }
+    }    
+    if(qa_level == 2) {
+        
+        if (distractor_type == 1) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 2) {
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 3) {
+            
+            
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+        }
+    }    
+    
+    
+    return(distractor_list)
+    
+}
+
+get_cardinality_set_distractor <- function(qa_level = NULL, question_type = NULL, distractor_type = NULL, source_set_1 = NULL, source_set_2 = NULL, source_set_3 = NULL, setSize = NULL, dType = NULL) {
+    
+    distractor_list = vector(mode = "list", length = 1)
+    
+    if(qa_level == 1) {
+        
+        if (distractor_type == 1) {
+            
+            probability <- sample(1:2, 1, replace = FALSE)
+            
+            if (probability == 1) {
+                distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+            }
+            if (probability == 2) {
+                distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+            }
+        }
+        
+        if (distractor_type == 2) {
+            
+            probability <- sample(1:2, 1, replace = FALSE)
+            
+            if (probability == 1) {
+                distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+            }
+            if (probability == 2) {
+                distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+            }
+        }
+        
+        if (distractor_type == 3) {
+            
+            probability <- sample(1:2, 1, replace = FALSE)
+            
+            if (probability == 1) {
+                distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+            }
+            if (probability == 2) {
+                distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+            }
+            
+            
+        }
+    }    
+    
+    if(qa_level == 2) {
+        
+        if (distractor_type == 1) {
+            
+            probability <- sample(1:2, 1, replace = FALSE)
+            
+            if (probability == 1) {
+                distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+            }
+            if (probability == 2) {
+                distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+            }
+        }
+        
+        if (distractor_type == 2) {
+            
+            probability <- sample(1:2, 1, replace = FALSE)
+            
+            if (probability == 1) {
+                distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+            }
+            if (probability == 2) {
+                distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+            }
+        }
+        
+        if (distractor_type == 3) {
+            
+            probability <- sample(1:2, 1, replace = FALSE)
+            
+            if (probability == 1) {
+                distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+            }
+            if (probability == 2) {
+                distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+            }
+            
+            
+        }
+    }   
+    
+    if(qa_level == 3) {
+        
+        if (question_type == 1) {
+        
+            if (distractor_type == 1) {
+            
+                probability <- sample(1:2, 1, replace = FALSE)
+            
+                if (probability == 1) {
+                    distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+                }
+                if (probability == 2) {
+                    distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+                }
+            }
+        
+            if (distractor_type == 2) {
+            
+                probability <- sample(1:2, 1, replace = FALSE)
+            
+                if (probability == 1) {
+                    distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+                }
+                if (probability == 2) {
+                    distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+                }
+            }
+        
+            if (distractor_type == 3) {
+            
+                probability <- sample(1:2, 1, replace = FALSE)
+            
+                if (probability == 1) {
+                    distractor_list[[1]] <- source_set_1 - sample(1:3, 1, replace = FALSE)
+                }
+                if (probability == 2) {
+                    distractor_list[[1]] <- source_set_1 + sample(1:3, 1, replace = FALSE)
+                }
+            
+            }   
+        }
+        if (question_type == 2) {
+            
+            if (distractor_type == 1) {
+                if (lengths(source_set_1) == lengths(source_set_2)) {
+                    distractor_list[[1]] <- "Surjection"
+                }
+                else if (lengths(source_set_1) < lengths(source_set_2)) {
+                    distractor_list[[1]] <- "Surjection"
+                }
+                else {
+                    distractor_list[[1]] <- "Bijection"
+                }
+            }
+            if (distractor_type == 2) {
+                if (lengths(source_set_1) == lengths(source_set_2)) {
+                    distractor_list[[1]] <- "Injection"
+                }
+                else if (lengths(source_set_1) < lengths(source_set_2)) {
+                    distractor_list[[1]] <- "Bijection"
+                }
+                else {
+                    distractor_list[[1]] <- "Injection"
+                }
+            }
+    }    
+    
+    }  
+    
+    
+    
+    return(distractor_list)
+    
+}
+get_set_equality_distractor <- function(qa_level = NULL, question_type = NULL, distractor_type = NULL, source_set_1 = NULL, source_set_2 = NULL, source_set_3 = NULL, setSize = NULL, dType = NULL) {
+    
+    distractor_list = vector(mode = "list", length = 1)
+    
+    if(qa_level == 1) {
+        if (distractor_type == 1) {
+            if (source_set_1 == source_set_2) {
+                distractor_list[[1]] <- "Equal"
+            }
+            else {
+                distractor_list[[1]] <- "Not Equal"
+            }
+        }
+       
+    }
+    if(qa_level == 2) {
+        if (distractor_type == 1) {
+            distractor_list[[1]] <- getSetNotations(leftIncl = TRUE, rightIncl = FALSE, leftBorder, 
+                                                    rightBorder, membersType = 1, notation = 1)
+        }
+        if (distractor_type == 2) {
+            distractor_list[[1]] <- getSetNotations(leftIncl = FALSE, rightIncl = FALSE, leftBorder, 
+                                                    rightBorder, membersType = 1, notation = 1)
+        }
+        if (distractor_type == 3) {
+            distractor_list[[1]] <- getSetNotations(leftIncl = FALSE, rightIncl = TRUE, leftBorder, 
+                                                    rightBorder, membersType = 1, notation = 1)
+        }
+    }
+    if(qa_level == 3) {
+        if (distractor_type == 1) {
+            distractor_list[[1]] <- getSetNotations(leftIncl = TRUE, rightIncl = FALSE, leftBorder, 
+                            rightBorder + 1, membersType = 1, notation = 2)
+        }
+        if (distractor_type == 2) {
+            distractor_list[[1]] <- getSetNotations(leftIncl = FALSE, rightIncl = FALSE, leftBorder - 1, 
+                                                    rightBorder + 1, membersType = 1, notation = 3)
+        }
+        if (distractor_type == 3) {
+            distractor_list[[1]] <- getSetNotations(leftIncl = FALSE, rightIncl = TRUE, leftBorder - 1, 
+                                                    rightBorder, membersType = 1, notation = 1)
+        }
+    }
+}
+get_set_partitions_distractor <- function(qa_level = NULL, question_type = NULL, distractor_type = NULL, source_set_1 = NULL, source_set_2 = NULL, source_set_3 = NULL, setSize = NULL, dType = NULL) {
+    
+    distractor_list = vector(mode = "list", length = 1)
+    
+    if(qa_level == 1) {
+        if (distractor_type == 1 || distractor_type == 2 || distractor_type == 3) {
+            #generate and partition distractor sets
+            currentDist <- (getSets(n = 1, m = 5, x = dType))
+            firstSet <- sample(source_set_1, length(source_set_1), replace  = FALSE)
+            length(firstSet) <- sample(2:4, 1, replace = FALSE)
+            secondSet <- not(source_set_1, firstSet)
+            firstSet <- replace(firstSet, length(firstSet) - sample(0:2, 1, replace = FALSE),
+                                getValue(x = dType, min = 1, max = 20))
+            firstSet <- formatPartitionAsSet(firstSet)
+            secondSet <- formatPartitionAsSet(secondSet)
+            wrong <- list()
+            # and concatenating both sets inside larger empty list.
+            # Wrong variable is created to deal with weird out of bounds issue in R.
+            wrong <- c(wrong, firstSet)
+            wrong <- c(wrong, secondSet)
+            currentDist[[1]] <- wrong
+            currentDist <- formatListAsSet(currentDist[[1]])  #The [[1]] is important here as it removes a layer of abstraction imposed by R
+            
+            #Note the single brackets '[1]' here 
+            distractor_list[[1]] <- currentDist
+        }
+    }
+    if(qa_level == 2) {
+        if (distractor_type == 1 || distractor_type == 2 || distractor_type == 3) {
+            #generate and partition distractor sets
+            currentDist <- (getSets(n = 1, m = 5, x = dType))
+            firstSet <- sample(source_set_1, length(source_set_1), replace  = FALSE)
+            length(firstSet) <- sample(2:4, 1, replace = FALSE)
+            secondSet <- not(source_set_1, firstSet)
+            firstSet <- formatPartitionAsSet(firstSet)
+            secondSet <- formatPartitionAsSet(secondSet)
+            wrong <- list()
+            # and concatenating both sets inside larger empty list.
+            # Wrong variable is created to deal with weird out of bounds issue in R.
+            wrong <- c(wrong, firstSet)
+            wrong <- c(wrong, secondSet)
+            currentDist[[1]] <- wrong
+            currentDist <- formatListAsSet(currentDist[[1]])  #The [[1]] is important here as it removes a layer of abstraction imposed by R
+            
+            #Note the single brackets '[1]' here 
+            distractor_list[[1]] <- currentDist
+        }
+    }
+    if(qa_level == 3) {
+        if (distractor_type == 1 || distractor_type == 2 || distractor_type == 3) {
+            #generate distractor partitions and notations, and append to currentDist
+            currentDist <- vector(mode = "list", length = 1)
+            DistractorPartitionLength <- sample(2:9, 1, replace = FALSE)
+            firstDistractorPartition <-getSetNotations(leftIncl = TRUE, rightIncl = TRUE, leftBorder, 
+                                                       rightBorder - DistractorPartitionLength, membersType = 1, notation = 1, format = FALSE)
+            secondDistractorPartition <- getSetNotations(leftIncl = TRUE, rightIncl = TRUE, rightBorder - DistractorPartitionLength + 1, 
+                                                         rightBorder, membersType = 1, notation = 1, format = FALSE)
+            currentDist[[1]] <- append(currentDist[[1]], firstDistractorPartition[[2]])
+            currentDist[[1]] <- append(currentDist[[1]], secondDistractorPartition[[2]])
+        
+            currentDist <- formatListAsSet(currentDist[[1]])  #The [[1]] is important here as it removes a layer of abstraction imposed by R
+        
+            #Note the single brackets '[1]' here 
+            distractor_list[[1]] <- currentDist
+        }
+        
+    }
+}
+get_symm_diff_distractor <- function(qa_level = NULL, question_type = NULL, distractor_type = NULL, source_set_1 = NULL, source_set_2 = NULL, source_set_3 = NULL, setSize = NULL, dType = NULL) {
+    
+    distractor_list = vector(mode = "list", length = 1)
+    
+    if(qa_level == 1 || qa_level == 2 || qa_level == 3) {
+        if (distractor_type == 1) {
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+        }
+        
+        if (distractor_type == 2) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+        }
+        
+        if (distractor_type == 3) {
+            
+            distractor_list[[1]] <- replace(source_set_1, length(source_set_1) - sample(0:1, 1, replace = FALSE), 
+                                            getValue(x = dType, min = 1, max = 30, cat = 6))
+            
+            
+        }
+    }
 }

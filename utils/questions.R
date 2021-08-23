@@ -150,3 +150,328 @@ cartseian_product_question_bank <- function(qa_level = NULL, question_type = NUL
     return(question_text)
 } 
 
+
+get_union_set_question <- function(qa_level = NULL, question_type = NULL, question_style = NULL) {
+    
+    if(qa_level == 1) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A and B be two sets. What is \\$A\\cup B\\$?')
+            }
+        }
+        
+    }
+    
+    if(qa_level == 2) {
+        
+        if (question_type == 1) {
+        
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is A ∪ (B ∪ C)?')
+            }
+        }
+        if (question_type == 2) {
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is (A ∪ B) ∪ C?')
+            }
+        }
+            
+    }
+    
+    
+    if(qa_level == 3) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is A ∪ (B ∪ C)?')
+            }
+        if (question_type == 2) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is (A ∪ B) ∪ C?')
+            }
+        }
+    }
+    
+    return(question_text)
+} 
+
+get_intersect_set_question <- function(qa_level = NULL, question_type = NULL, question_style = NULL) {
+    
+    if(qa_level == 1) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A and B be two sets. What is \\$A\\cap B\\$?')
+            }
+        }
+        
+    }
+    
+    if(qa_level == 2) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A and B be two sets. What is \\$A\\cap B\\$?')
+            }
+        }
+    }
+    
+    
+    if(qa_level == 3) {
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A and B be two sets. What is \\$A\\cap B\\$?')
+            }
+        }
+    }
+    
+    return(question_text)
+} 
+
+get_asymm_set_question <- function(qa_level = NULL, question_type = NULL, question_style = NULL) {
+    
+    if(qa_level == 1) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ("Let A and B be two sets. What is A - B?")
+            }
+        }
+        
+    }
+    
+    if(qa_level == 2) {
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is A - (B - C)?')
+            }
+        }
+        if (question_type == 2) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is (A - B) - C?')
+            }
+        }
+    }
+    
+    
+    if(qa_level == 3) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is A - (B - C)?')
+            }
+        }
+        if (question_type == 2) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is (A - B) - C?')
+            }
+        }
+    }
+    
+    return(question_text)
+} 
+
+get_complement_set_question <- function(qa_level = NULL, question_type = NULL, question_style = NULL) {
+    
+    if(qa_level == 1) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ("Let A be a set and B be the universal set. What is the complement of set A?")
+            }
+        }
+        
+    }
+    
+    if(qa_level == 2) {
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ("Let A be a set and B be the universal set. What is the complement of set A?")
+            }
+        }
+    }
+    
+    
+    if(qa_level == 3) {
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ("Let A be a set and B be the universal set. What is the complement of set A?")
+            }
+        }
+    }
+    
+    return(question_text)
+} 
+
+get_equality_set_question <- function(qa_level = NULL, question_type = NULL, question_style = NULL) {
+    
+    if(qa_level == 1) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ("Let A and B be two sets. Are A and B equal?")
+            }
+        }
+        
+    }
+    
+    if(qa_level == 2) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ("Let A be a set. Which set is equivalent to set A?")
+            }
+        }
+    }
+    
+    
+    if(qa_level == 3) {
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ("Let A be a set. Which set is not equivalent to set A?")
+            }
+        }
+    }
+    
+    return(question_text)
+} 
+
+
+get_cardinality_set_question <- function(qa_level = NULL, question_type = NULL, question_style = NULL) {
+    
+    if(qa_level == 1) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A be a set. What is the cardinality of set A?')
+            }
+        }
+        
+    }
+    
+    if(qa_level == 2) {
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A be a set. What is the cardinality of set A?')
+            }
+        }
+    }
+    
+    
+    if(qa_level == 3) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A be a set and B be a set. What is the total cardinality of sets A and B?')
+            }
+        }
+    }    
+        if (question_type == 2) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A be a set and B be a set. Based on the relative cardinalities of A and B, what type of function is A → B?')
+            }
+        }
+    }
+    
+    return(question_text)
+} 
+
+get_symm_diff_set_question <- function(qa_level = NULL, question_type = NULL, question_style = NULL) {
+    
+    if(qa_level == 1) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A and B be two sets. What is the symmetric difference of A and B?')
+            }
+        }
+        
+    }
+    
+    if(qa_level == 2) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A and B be two sets. What is the symmetric difference of A and B?')
+            }
+        }
+    }
+    
+    
+    if(qa_level == 3) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A, B, and C be three sets. What is the symmetric difference of A, B, and C?')
+            }
+        }
+    }
+    
+    return(question_text)
+} 
+
+get_partition_set_question <- function(qa_level = NULL, question_type = NULL, question_style = NULL) {
+    
+    if(qa_level == 1) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A be a set. Which answer represents a correct set partition of set A?')
+            }
+        }
+        
+    }
+    
+    if(qa_level == 2) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A be a set. Which answer represents a incorrect set partition of set A?')
+            }
+        }
+    }
+    
+    
+    if(qa_level == 3) {
+        
+        if (question_type == 1) {
+            
+            if(question_style == 1) {
+                question_text <- ('Let A be a set. Which answer represents a incorrect set partition of set A?')
+            }
+        }
+    }
+    
+    return(question_text)
+} 
+
+
+
+
