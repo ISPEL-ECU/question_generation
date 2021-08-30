@@ -45,11 +45,46 @@ Currently implemented API functions are found within the `set-relation.R` file. 
  
   <h4>/distractors.R</h4>
   
-  Contains the distractor banks for all three difficulty levels of a given question generation topic. The banks are subdivided by difficulty level(qa_level), question_type, and distractor type. Each corresponding difficulty level can tbe customized to allow for different distractors based on each question type asked, with the distractor_type variable corresponding to 1 individual distractor of the group of three to be paired with each correct answer.
+  Contains the distractor banks for all three difficulty levels of a given question generation topic. The banks are subdivided by difficulty level(qa_level), question_type, and distractor type. Each corresponding difficulty level can be customized to allow for different distractors based on each question type asked, with the distractor_type variable corresponding to 1 individual distractor of the group of three to be paired with each correct answer.
   
   <h4>/questions.R</h4>
   
   Contains the question banks for all three difficulty levels of a given question generation. The banks are subdivided by difficulty level(qa_level), question_type, and question_style. Question_type refers to different questions for a given difficulty level, while the question_style variable refers to different wordings or stylings for the same question.
+  
+  <h2>Formatting Conventions<h2>
+  
+  Here I will outline a brief topic in pseudo code to give an idea of the formatting conventions used for topic generation:
+  
+  <h4>get_sample_topic_level_1</h4>
+  
+  qa_level <- question difficulty number
+  question_type <- sample(range of number of question types)
+  question_style <- sample(range of number of question styles)
+  
+  questionText <- get_sample_topic_set_question(with inputs of qa_level, question_type, and question_style)
+  
+  setGeneration
+  #uses sourceSets, setNotation, or sequentialSets functions
+  
+  correct <- answer
+  #perform set manipulations to generate and define correct answer
+  
+  define distractors list (vector(mode="list", length = number of distractors))  
+  
+  for(i in (1 : number of distractors)) :
+  	current item in list <- get_sample_topic_set_distractor()
+	
+	
+  sourceSets <- formatListAsSet(sourceSets)
+ #formatting sourceSets for the API
+ 
+ insertSetStrings(sourceSets)
+ #formatting the formatted sourceSets into question strings for the topic.
+ 
+ questionContents_c(questionText, sourceSets)
+  #Question concatenation
+  
+  toSend <- list(content, correct, distractors)
   
   <h2>Endpoints in Detail</h2>
 
@@ -62,7 +97,7 @@ Currently implemented API functions are found within the `set-relation.R` file. 
 ```
   @param    qType           Question Type ('1': Multiple Choice)
   
-  @param    qDifficulty     Question Difficutly (1:easiest - 5:hardest)
+  @param    qDifficulty     Question Difficulty (1:easiest - 5:hardest)
   
   @param    dataType        Data type (1: Ints, 2: Real, 3: Complex, 
                                        4: Char, 5: String, 6: Mixed) 
