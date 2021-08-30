@@ -53,35 +53,46 @@ Currently implemented API functions are found within the `set-relation.R` file. 
   
   <h2>Formatting Conventions<h2>
   
-  Here I will outline a brief topic in pseudo code to give an idea of the formatting conventions used for topic generation:
+  <h4>Here I will outline a brief topic in pseudo code to give an idea of the formatting conventions used for topic generation:</h4>
   
   <h4>get_sample_topic_level_1</h4>
   
-  qa_level <- question difficulty number
-  question_type <- sample(range of number of question types)
-  question_style <- sample(range of number of question styles)
+  qa_level <-- question difficulty number
   
-  questionText <- get_sample_topic_set_question(with inputs of qa_level, question_type, and question_style)
+  question_type <-- sample(range of number of question types)
   
-  setGeneration
+  question_style <-- sample(range of number of question styles)
+  
+  questionText <--  get_sample_topic_set_question
+  
+  # (with inputs of qa_level, question_type, and question_style)
+  
+  sourceSets <-- setGeneration
+  
   #uses sourceSets, setNotation, or sequentialSets functions
   
   correct <- answer
+  
   #perform set manipulations to generate and define correct answer
   
-  define distractors list (vector(mode="list", length = number of distractors))  
+  define distractors list 
   
-  for(i in (1 : number of distractors)) :
+  # (vector(mode="list", length = number of distractors))  
+  
+  for (i in ( 1 : number of distractors)) :
+  
   	current item in list <- get_sample_topic_set_distractor()
 	
-	
   sourceSets <- formatListAsSet(sourceSets)
+  
  #formatting sourceSets for the API
  
  insertSetStrings(sourceSets)
+ 
  #formatting the formatted sourceSets into question strings for the topic.
  
  questionContents_c(questionText, sourceSets)
+ 
   #Question concatenation
   
   toSend <- list(content, correct, distractors)
